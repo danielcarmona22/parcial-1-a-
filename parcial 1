@@ -1,0 +1,77 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int opcion;
+    float base, altura, lado, lado_mayor, lado_menor, apotema, area;
+
+    cout << "escoja una figura para calcular el area:"<<endl;
+    cout << "1. triangulo"<<endl;
+    cout << "2. triangulo equilatero"<<endl;
+    cout << "3. cuadrado"<<endl;
+    cout << "4. paralelogramo"<<endl;
+    cout << "5. trapecio"<<endl;
+    cout << "6. trapezoide"<<endl;
+    cout << "7. exagono regular"<<endl;
+    cout << "8. octagono regular"<<endl;
+    cout << "escriba el numero que va a usar: ";
+    cin >> opcion;
+
+    if (opcion == 1) {
+        cout << "base del triángulo: ";
+        cin >> base;
+        cout << "altura del triángulo: ";
+        cin >> altura;
+        area = (base * altura) / 2; 
+        cout << "el area del triángulo es: " << area << endl;
+    } else if (opcion == 2) {
+        cout << "lado del triángulo equilátero: ";
+        cin >> lado;
+        area = (lado * lado * 0.433);
+        cout << "area del triángulo equilátero es: " << area << endl;
+    } else if (opcion == 3) {
+        cout << "lado del cuadrado: ";
+        cin >> lado;
+        area = lado * lado;
+        cout << "el area del cuadrado es: " << area << endl;
+    } else if (opcion == 4) {
+        cout << "base del paralelogramo: ";
+        cin >> base;
+        cout << "altura del paralelogramo: ";
+        cin >> altura;
+        area = base * altura;
+        cout << "el area del paralelogramo es: " << area << endl;
+    } else if (opcion == 5) {
+        cout << "base menor del trapecio: ";
+        cin >> lado_menor;
+        cout << "base mayor del trapecio: ";
+        cin >> lado_mayor;
+        cout << "altura del trapecio: ";
+        cin >> altura;
+        area = ((lado_menor + lado_mayor) * altura) / 2;
+        cout << "el area del trapecio es: " << area << endl;
+    } else if (opcion == 6) {
+        cout << "bas menor del trapezoide: ";
+        cin >> lado_menor;
+        cout << "Base mayor del trapezoide: ";
+        cin >> lado_mayor;
+        cout << "altura del trapezoide: ";
+        cin >> altura;
+        area = ((lado_menor + lado_mayor) * altura) / 2;
+        cout << "el area del trapezoide es: " << area << endl;
+    } else if (opcion == 7) {
+        cout << "lado del hexágono: ";
+        cin >> lado;
+        area = (6 * lado * lado) * 0.5; 
+        cout << "el area del hexágono es: " << area << endl;
+    } else if (opcion == 8) {
+        cout << "lado del octágono: ";
+        cin >> lado;
+        cout << "apotema del octágono: ";
+        cin >> apotema;
+        area = (8 * lado * apotema) / 2; 
+        cout << "el rea del octágono es: " << area << endl;
+    }
+
+    return 0;
+}
